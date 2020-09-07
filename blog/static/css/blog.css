@@ -1,0 +1,73 @@
+.jumbotron {
+    background-color: #CEDFD9;
+    margin-top: 0;
+    padding: 30px 30px 30px 30px;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 30pt;
+  color: black;
+}
+
+h3 {
+  font-style: italic;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 13pt;
+}
+
+#summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#name {
+  font-size: 36pt;
+  font-family: 'Lobster', cursive;
+}
+
+.email {
+  padding: 10px 10px 10px 10px;
+}
+
+.linkedin {
+  padding: 15px 15px 15px 15px;
+  border-style: solid;
+  border-color: black;
+  border-top: 1px;
+  border-bottom: 1px;
+}
+
+.github {
+  padding: 10px 10px 10px 10px;
+}
+
+.section {
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 20px 20px 20px 20px;
+}
+
+.section-content {
+  margin-left: 45px;
+  margin-right: 45px;
+  padding: 5px 5px 5px 5px;
+}
+
+#skills {
+  margin-left: 50px;
+  margin-right: 50px;
+}
