@@ -14,3 +14,13 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+class Job(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(null=True)
+    start_year = models.SmallIntegerField(null=True)
+    end_year = models.SmallIntegerField(null=True)
+    location = models.TextField(null=True)
+
+    def __str__(self):
+        return self.title

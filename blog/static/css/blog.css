@@ -1,5 +1,5 @@
 .jumbotron {
-    background-color: #CEDFD9;
+    background-color: #BF9CB2;
     margin-top: 0;
     padding: 20px 20px 20px 20px;
 }
@@ -10,7 +10,24 @@ h2 {
   color: black;
 }
 
+h3 {
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+}
+
+h5 {
+    font-family: 'Lato', sans-serif;
+}
+
 p {
+  font-family: 'Lato', sans-serif;
+  font-size: 13pt;
+}
+
+a {
   font-family: 'Lato', sans-serif;
   font-size: 13pt;
 }
@@ -37,14 +54,6 @@ p {
 
 #about-me {
   font-size: 16pt;
-}
-
-.email:hover {
-  transform: scale(1.1);
-}
-
-.email {
-  padding: 10px 10px 10px 10px;
 }
 
 .linkedin:hover {
@@ -74,6 +83,8 @@ p {
 .card {
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 13pt;
   font-family: 'Lato', sans-serif;
 }
@@ -81,6 +92,28 @@ p {
 #about-me-photo {
   max-width: 300px;
   padding: 0px 10px 10px 10px;
+}
+
+.btn {
+  padding: 10px 10px 10px 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  background-color: #BF9CB2;
+  border-color: #BF9CB2;
+}
+
+#osu {
+  padding: 15px 15px 15px 15px;
+  background-color: #F4F5F6;
+}
+
+#end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content:flex-end;
 }
 
 @media (min-width: 576px) {
