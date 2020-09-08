@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Michelle McFarland</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  </head>
+
+  <body>
+
+    <div class="jumbotron" id="header">
+
+      <div class="container" id="summary">
+        <h1 id="name">Michelle McFarland</h1>
+      </div>
+
+      <div class="container" id="contact">
+
+        <div class="row">
+
+          <a class="linkedin" href="https://www.linkedin.com/in/michelleimcfarland/">
+          <img src="/Users/michellemcfarland/portfolio/blog/static/images/iconfinder_Logo_LinkedIn.png" width="40" height="40" alt=""></a>
+
+          <a class="github" href="https://github.com/mcfarlm3">
+          <img src="/Users/michellemcfarland/portfolio/blog/static/images/iconfinder_Logo_Github.png" width="40" height="40" alt=""></a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          </div>
+
+          <div class="col-10">
+
+            <div class="section" id="about-me">
+              <h2><u>About Me</u></h2>
+
+              <div class="section-content">
+                <div class="row">
+                    <div class="col-10 col-md-4">
+                      <img id=about-me-photo src="/Users/michellemcfarland/portfolio/blog/static/images/about_me_photos.jpg" alt="">
+                    </div>
+
+                    <div class="col-12 col-xl-7" id="about-me-description">
+                      <p>I'm a computer science student and former middle/high school science teacher living in the Seattle area. Graduating in December 2021 and currently seeking a software engineering internship for Summer 2021.</p>
+                      <p>I am passionate about creating software products that are intuitive, accessible, and empowering for all users. My areas of interest include web development, civic tech, educational technology and data visualization.</p>
+                      <p>In my free time I enjoy reading, sewing, and spending time outdoors with my two dogs.</p>
+                    </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="section" id="skills">
+              <h2><u>Skills</u></h2>
+
+              <div class="section-content">
+
+                <div class="card-columns">
+
+                  <div class="card" style="width: 17rem;">
+                    <div class="card-header">
+                      Programming Languages
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Python</li>
+                      <li class="list-group-item">Javascript</li>
+                      <li class="list-group-item">HTML</li>
+                      <li class="list-group-item">CSS</li>
+                    </ul>
+                  </div>
+
+                  <div class="card" style="width: 17rem;">
+                    <div class="card-header">
+                      Technical Competencies
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Django</li>
+                      <li class="list-group-item">Bootstrap </li>
+                      <li class="list-group-item">Object-Oriented Design</li>
+                      <li class="list-group-item">Git/GitHub</li>
+                    </ul>
+                  </div>
+
+                  <div class="card" style="width: 17rem;">
+                    <div class="card-header">
+                      Interpersonal
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Teacher/Group Facilitator</li>
+                      <li class="list-group-item">Actively Seeks Feedback</li>
+                      <li class="list-group-item">Team-Oriented</li>
+                      <li class="list-group-item">Persistent Problem-Solver</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="section" id="projects">
+              <h2><u>Projects</u></h2>
+
+              <div class="section-content">
+                {% for project in project_list %}
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <p><a href="{{ project.source }}">Source Code</a></p>
+                <p></p>
+                {% endfor %}
+              </div>
+            </div>
+
+            <div class="section" id="education">
+              <h2><u>Education</u></h2>
+
+              <div class="section-content">
+                <div class="card-columns">
+                  <div class="card text-center" style="width: 15rem; height: 25rem;">
+                    <img class="card-img-top" id="osu" src="/Users/michellemcfarland/portfolio/blog/static/images/OSU_Logo.png" alt="">
+                    <div class="card-body">
+                      <h5>B.S. Computer Science</h5>
+                      <p>Graduating Dec 2021</p>
+                      <p>G.P.A. 3.5</p>
+                    </div>
+                  </div>
+
+                  <div class="card text-center" style="width: 15rem; height: 25rem;">
+                    <img class="card-img-top" src="/Users/michellemcfarland/portfolio/blog/static/images/WWU_Logo.png" alt="">
+                    <div class="card-body">
+                      <h5>Master in Teaching</h5>
+                      <p>G.P.A. 3.98</p>
+                      <h5>B.S. Biology</h5>
+                      <p>G.P.A. 3.64</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section" id="work-experience">
+              <h2><u>Work Experience</u></h2>
+
+              <div class="section-content">
+                {% for job in job_list %}
+                <h3>{{ job.title }}</h3>
+                <h5>{{ job.location }}</h5>
+                <h5>{{ job.start_year }}-{{ job.end_year }}</h5>
+                <p>{{ job.description|linebreaks }}</p>
+                {% endfor %}
+              </div>
+
+            </div>
+
+            <div class="section" id="follow-up">
+              <h2><u>Follow Up</u></h2>
+              <a href="mailto:EMAILADDRESS" id="mail-link" class="btn btn-dark">Email Me</a>
+            </div>
+
+          </div>
+
+          <div class="col">
+          </div>
+
+        </div>
+      </div>
+
+    <div class="section" id="end">
+      <div class="section-content">
+        <div class="row">
+
+          <a class="linkedin" href="https://www.linkedin.com/in/michelleimcfarland/">
+          <img src="/Users/michellemcfarland/portfolio/blog/static/images/iconfinder_Logo_LinkedIn.png" width="40" height="40" alt=""></a>
+
+          <a class="github" href="https://github.com/mcfarlm3">
+          <img src="/Users/michellemcfarland/portfolio/blog/static/images/iconfinder_Logo_Github.png" width="40" height="40" alt=""></a>
+
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>
