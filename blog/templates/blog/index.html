@@ -5,8 +5,8 @@
   <head>
     <meta charset="utf-8">
     <title>Michelle McFarland</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
   </head>
@@ -39,35 +39,88 @@
 </div>
 
 <div class="container">
-  <div class="row">
 
-    <div class="col" id="spacer">
+<div class="row">
+
+    <div class="col" id="left-spacer">
     </div>
 
-    <div class="col-6" id="main-content">
+    <div class="col-10" id="main-content">
 
         <div class="section">
-          <h2>About Me</h2>
-          <p class="section-content">I'm a computer science student and former teacher living in the Seattle area. Graduating in December 2021 and seeking a software engineering internship for Summer 2021. I am passionate about creating software products that are intuitive, accessible, and empowering for all users. In my free time I enjoy reading, sewing/quilting, and spending time outdoors with my two dogs.</p>
+          <h2><u>About Me</u></h2>
 
-          <div class="card" style="width: 18rem;">
+          <div class="section-content">
+            <div class="row">
+                <div class="col-10 col-md-4">
+                  <img id=about-me-photo src="/Users/michellemcfarland/portfolio/blog/static/images/about_me_photos.jpg" alt="">
+                </div>
 
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="col-12 col-xl-7" id="about-me-description">
+                  <p>I'm a computer science student and former middle/high school science teacher living in the Seattle area. Graduating in December 2021 and currently seeking a software engineering internship for Summer 2021.</p>
+                  <p>I am passionate about creating software products that are intuitive, accessible, and empowering for all users. My areas of interest include web development, civic tech, educational technology and data visualization.</p>
+                  <p>In my free time I enjoy reading, sewing, and spending time outdoors with my two dogs.</p>
+                </div>
+
+
+
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-
           </div>
 
         </div>
 
         <div class="section">
-          <h2>Projects</h2>
+          <h2><u>Skills</u></h2>
+
+        <div class="section-content">
+
+          <div class="card-columns">
+
+            <div class="card" style="width: 17rem;">
+              <div class="card-header">
+                Programming Languages
+              </div>
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Python</li>
+                <li class="list-group-item">Javascript</li>
+                <li class="list-group-item">HTML</li>
+                <li class="list-group-item">CSS</li>
+              </ul>
+            </div>
+
+            <div class="card" style="width: 17rem;">
+              <div class="card-header">
+                Technical Competencies
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Django</li>
+                <li class="list-group-item">Bootstrap </li>
+                <li class="list-group-item">Object-Oriented Design</li>
+                <li class="list-group-item">Git/GitHub</li>
+              </ul>
+            </div>
+
+            <div class="card" style="width: 17rem;">
+              <div class="card-header">
+                Interpersonal
+              </div>
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Teaching/Group Facilitation</li>
+                <li class="list-group-item">Actively Seeks Feedback</li>
+                <li class="list-group-item">Team-Oriented</li>
+                <li class="list-group-item">Proactive Communicator</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        </div>
+
+        <div class="section">
+          <h2><u>Projects</u></h2>
 
           <div class="section-content">
             {% for project in project_list %}
@@ -77,12 +130,18 @@
           </div>
         </div>
 
+        <div class="section">
+          <h2><u>Education</u></h2>
+
+        </div>
+
     </div>
 
-    <div class="col" id="spacer">
-    </div>
+    <div class="col" id="right-spacer">
+</div>
 
-  </div>
+
+</div>
 </div>
 
 
